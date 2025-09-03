@@ -1,0 +1,12 @@
+# AWS SDK for Bedrock integration
+boto3>=1.28.0
+botocore>=1.31.0
+
+# Data processing and ML utilities
+numpy>=1.21.0
+
+# Optional: For enhanced text processing
+typing-extensions>=4.0.0
+
+# Optional: For logging and debugging
+python-dotenv>=0.19.0

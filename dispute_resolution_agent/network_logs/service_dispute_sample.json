@@ -1,0 +1,20 @@
+{
+  "dispute_type": "service",
+  "customer_id": "CUST-789123",
+  "customer_name": "TechCorp Industries",
+  "service_plan": "Enterprise Internet - 1Gbps",
+  "reported_issue": "Complete internet connectivity loss from 3:45 PM to 4:30 PM",
+  "customer_impact": "Business operations disrupted, unable to access cloud services",
+  "network_analysis": {
+    "outage_detected": false,
+    "affected_peers": 0,
+    "routes_lost": 0,
+    "outage_start": "2025-09-02T15:45:00Z",
+    "outage_end": "2025-09-02T16:30:00Z",
+    "root_cause": "Undetermined - requires further investigation",
+    "customer_impact": "MINIMAL - Brief disruption, service quickly restored",
+    "raw_logs": []
+  },
+  "transaction_history": "\n        Customer: TechCorp Industries (Account: CUST-789123)\n        Service: Enterprise Internet - 1Gbps Dedicated\n        Monthly Charge: $2,999.99\n        SLA: 99.9% uptime guarantee\n        Reported Outage: 2025-09-02T15:45:00Z - 2025-09-02T16:30:00Z\n        Duration: 45 minutes\n        SLA Breach: Yes (exceeded 99.9% threshold)\n        ",
+  "customer_interactions": "\n        15:50 - Customer called reporting complete internet outage\n        15:52 - Verified customer identity and service details\n        15:55 - Confirmed outage affecting their circuit\n        16:00 - Escalated to network operations center\n        16:30 - Service restored, customer notified\n        16:35 - Customer confirmed connectivity restored\n        Post-outage: Customer requesting SLA credit for downtime\n        "
+}

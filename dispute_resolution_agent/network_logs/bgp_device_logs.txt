@@ -1,0 +1,46 @@
+# BGP Device Logs - Core Router RTR-01
+# Generated on 2025-09-02 14:30:00
+# AS65001 - Primary Internet Gateway
+
+2025-09-02T14:30:00.123Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 192.168.1.1 (AS65002) Up
+2025-09-02T14:30:01.456Z RTR-01 BGP: %BGP-4-MAXPFX: neighbor 192.168.1.2 (AS65003) prefix limit 75000 reached
+2025-09-02T14:30:05.789Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 172.16.1.1 (AS65005) Down - TCP connection lost
+2025-09-02T14:30:15.234Z RTR-01 BGP: %BGP-3-NOTIFICATION: sent to neighbor 172.16.1.1 (AS65005) 4/0 (hold timer expired) 0 bytes
+2025-09-02T14:30:30.567Z RTR-01 BGP: %BGP-4-MAXPFXEXCEED: neighbor 192.168.1.2 (AS65003) prefix limit exceeded
+2025-09-02T14:31:00.890Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 10.0.1.1 (AS65004) Up
+2025-09-02T14:31:15.123Z RTR-01 BGP: Route 203.0.113.0/24 from 192.168.1.1 (AS65002) withdrawn
+2025-09-02T14:31:30.456Z RTR-01 BGP: Route 198.51.100.0/24 announced to neighbor 10.0.1.1 (AS65004)
+2025-09-02T14:32:00.789Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 172.16.1.1 (AS65005) Up
+
+# Network Outage Event - Service Disruption
+2025-09-02T15:45:00.000Z RTR-01 BGP: %BGP-3-ADJCHANGE: neighbor 192.168.1.1 (AS65002) Down - Network unreachable
+2025-09-02T15:45:00.100Z RTR-01 BGP: %BGP-3-ADJCHANGE: neighbor 192.168.1.2 (AS65003) Down - Network unreachable
+2025-09-02T15:45:01.000Z RTR-01 BGP: Route 203.0.113.0/24 withdrawn due to peer down
+2025-09-02T15:45:01.100Z RTR-01 BGP: Route 198.51.100.0/24 withdrawn due to peer down
+2025-09-02T15:45:01.200Z RTR-01 BGP: Route 192.168.0.0/16 withdrawn due to peer down
+2025-09-02T15:45:02.000Z RTR-01 BGP: %BGP-1-NOREACHABLE: No path to destination networks
+2025-09-02T15:45:05.000Z RTR-01 BGP: %BGP-1-MAJORFAIL: Major routing failure detected
+
+# Customer Impact Period - 45 minutes of degraded service
+2025-09-02T15:45:10.000Z RTR-01 BGP: %BGP-2-PFXLOSS: Lost 250 IPv4 prefixes
+2025-09-02T15:46:00.000Z RTR-01 BGP: Attempting reconnection to peer 192.168.1.1 (AS65002)
+2025-09-02T15:47:00.000Z RTR-01 BGP: Attempting reconnection to peer 192.168.1.2 (AS65003)
+2025-09-02T15:50:00.000Z RTR-01 BGP: %BGP-4-RECONNATTEMPT: Reconnection attempt 5 to 192.168.1.1 failed
+2025-09-02T16:00:00.000Z RTR-01 BGP: %BGP-4-RECONNATTEMPT: Reconnection attempt 10 to 192.168.1.1 failed
+
+# Service Recovery
+2025-09-02T16:30:00.000Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 192.168.1.1 (AS65002) Up
+2025-09-02T16:30:05.000Z RTR-01 BGP: %BGP-5-ADJCHANGE: neighbor 192.168.1.2 (AS65003) Up
+2025-09-02T16:30:10.000Z RTR-01 BGP: Route 203.0.113.0/24 learned from 192.168.1.1 (AS65002)
+2025-09-02T16:30:15.000Z RTR-01 BGP: Route 198.51.100.0/24 learned from 192.168.1.2 (AS65003)
+2025-09-02T16:30:20.000Z RTR-01 BGP: Route 192.168.0.0/16 learned from 192.168.1.1 (AS65002)
+2025-09-02T16:30:30.000Z RTR-01 BGP: %BGP-5-RECOVERY: Full routing table recovered
+2025-09-02T16:31:00.000Z RTR-01 BGP: %BGP-6-STABLE: All BGP sessions stable
+
+# Post-Recovery Monitoring
+2025-09-02T16:35:00.000Z RTR-01 BGP: Keepalive sent to neighbor 192.168.1.1 (AS65002)
+2025-09-02T16:35:00.000Z RTR-01 BGP: Keepalive sent to neighbor 192.168.1.2 (AS65003)
+2025-09-02T16:35:00.000Z RTR-01 BGP: Keepalive sent to neighbor 10.0.1.1 (AS65004)
+2025-09-02T16:35:00.000Z RTR-01 BGP: Keepalive sent to neighbor 172.16.1.1 (AS65005)
+2025-09-02T16:40:00.000Z RTR-01 BGP: %BGP-6-ADJSTATS: neighbor 192.168.1.1 uptime 00:10:00
+2025-09-02T16:45:00.000Z RTR-01 BGP: Route dampening statistics reset for all prefixes
